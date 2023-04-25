@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        body{
+            animation: colores 7s infinite;
+        }
+        @keyframes colores{
+            0%{
+                background-color: black;
+            }
+            25%{
+                background-color: aqua;
+            }
+            50%{
+                background-color: rgb(79, 88, 79);
+            }
+            100%{
+                background-color: rgb(138, 7, 7);
+            }
+        }
+        h1{
+            text-align: center;
+            padding-top: 250px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        .cuadroBlanco{
+            background-color: white;
+            position: absolute;
+            animation: nuevoCuadro 2s infinite;
+        }
+        @keyframes nuevoCuadro{
+            from{
+                top: 0px;
+            }
+                to{
+                    top: 200px;
+                }
+            
+        }
+        #cuadroBlanco1{
+            width: 100px;
+            height: 100px;
+            left: 50px;
+        }
+        #cuadroBlanco2{
+            width: 100px;
+            height: 100px;
+            left: 220px;
+        }
+        #cuadroRojo{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 380px;
+            animation: nuevoRojo 1s infinite;
+        }
+        @keyframes nuevoRojo{
+            0% {top: 0px;}
+            25%{top: 200px; width: 350px; height: 350px; background-color: aquamarine;}
+            50%{top: 50px; background-color: rgb(173, 4, 4) ; border: solid;}
+            100%{top: 100px; background-color: rgb(102, 255, 0);}
+        }
+        #cuadroMulticolor{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            left: 500px;
+            animation: cuadroMulticolor 1s infinite;
+        }
+        @keyframes nuevoMulticolor{
+            0%{top: 0px; left: 500px; background-color: red;}
+            25%{top: 0px; left: 600px; background-color: blueviolet;}
+            50%{top: 0px; left: 500px; background-color: darkblue;}
+            100%{top: 0px; left: 500px; background-color: darkolivegreen;}
+        }
+        #circulo {
+            width: 100px;
+            height: 100px;
+            left: 800px;
+            background-color: chartreuse;
+            position: absolute;
+            border-radius: 50%;
+            animation: crece 1s infinite ; 
+          }
+          @keyframes crece{
+            0%{top: 0px; width: 100px; height: 100px;}
+            100%{top: 0px; width: 100px; height: 100px;}
+          }
+          .gradiante{
+            width: 300px;
+            height: 250px;
+            padding: 200px;
+            background: rgb(63,94,251);
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
+          }
+    </style>
+</head>
+<body>
+    <h1> Felicidades</h1>
+    <div id="cuadroBlanco1" class="cuadroBlanco">1</div>
+    <div id="cuadroBlanco2" class="cuadroBlanco">2</div>
+    <div id="cuadroRojo" >Rojo</div>
+    <div id="cuadroMulticolor"></div>
+    <div id="circulo"></div>
+    <div class="gradiante"></div>
+    
+</body>
+</html>
